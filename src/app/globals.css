@@ -7,19 +7,20 @@
   --background-rgb: 255, 255, 255;
 }
 
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  min-height: 100%;
 }
 
 /* Custom styles */
 .font-playfair {
   font-family: var(--font-playfair);
-}
-
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Navigation link hover effect */
@@ -50,4 +51,12 @@ html {
 .button-hover:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Parallax container */
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

@@ -24,48 +24,48 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-white pt-20">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <section className="relative h-[70vh] flex items-center justify-center text-white bg-black pt-16">
+        <div className="absolute inset-0 bg-black/20 z-10"></div>
         <Image
           src="/hero-image.jpg"
           alt="Diverse hands united"
           fill
           sizes="100vw"
           quality={100}
-          className="object-cover"
+          className="object-cover opacity-90"
           priority
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-left">
-          <div className="space-y-4 text-3xl md:text-4xl lg:text-5xl font-light">
+          <div className="space-y-2 text-2xl md:text-3xl lg:text-4xl font-light">
             <p>We love <span className="font-medium">Jesus</span>. We love <span className="font-medium">Buddha</span> too.</p>
             <p>And <span className="font-medium">Muhammad</span> and <span className="font-medium">Krishna</span> and</p>
             <p><span className="font-medium">Moses</span> and <span className="font-medium">Guru Nanak</span> and <span className="font-medium">Julian</span></p>
             <p><span className="font-medium">of Norwich</span>. And lots of other folks.</p>
-            <p className="mt-8">We are <span className="font-medium text-yellow-400">Unitarians</span>.</p>
+            <p className="mt-4">We are <span className="font-medium text-yellow-400">Unitarians</span>.</p>
           </div>
-          <p className="mt-8 text-xl">Welcome to the Dunham Road Unitarian Chapel, Altrincham.</p>
+          <p className="text-lg mt-4">Welcome to the Dunham Road Unitarian Chapel, Altrincham.</p>
         </div>
       </section>
 
       {/* Join Us Section */}
-      <section className="py-20 bg-white">
+      <section className="relative bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[400px]">
+          <div className="relative h-[300px] shadow-xl rounded-lg overflow-hidden">
             <Image
               src="/community.jpg"
-              alt="Diverse community"
+              alt="Our diverse community"
               fill
-              className="object-cover rounded-lg shadow-xl"
+              className="object-cover"
             />
           </div>
-          <div>
-            <h2 className="text-4xl font-playfair mb-6">Join us</h2>
-            <p className="text-xl mb-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-playfair mb-4">Join us</h2>
+            <p className="text-xl mb-6">
               We would love to see you at our next Sunday service, normally held 11.30 am every Sunday both in person and via Zoom
             </p>
             <Link
               href="#"
-              className="inline-block bg-red-500 text-white px-8 py-3 rounded hover:bg-red-600 transition-colors"
+              className="inline-block bg-red-500 text-white px-8 py-3 rounded shadow-lg hover:bg-red-600 transition-colors"
             >
               CHECK UPCOMING DATES
             </Link>
@@ -74,31 +74,31 @@ export default function Home() {
       </section>
 
       {/* Progressive Section */}
-      <section className="py-20 bg-yellow-400">
+      <section className="bg-yellow-400 py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl mb-16">We are <span className="font-medium">progressive</span></h2>
-          <div className="grid md:grid-cols-4 gap-12">
+          <h2 className="text-4xl mb-12">We are <span className="font-medium">progressive</span></h2>
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="flex flex-col items-center">
-              <div className="w-24 h-24 mb-4">
-                <Image src="/icons/church.png" alt="Church icon" width={96} height={96} />
+              <div className="w-20 h-20 mb-4">
+                <Image src="/icons/church.png" alt="Church icon" width={80} height={80} />
               </div>
               <p className="text-sm">1st to have female ministers</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-24 h-24 mb-4">
-                <Image src="/icons/marriage.png" alt="Marriage icon" width={96} height={96} />
+              <div className="w-20 h-20 mb-4">
+                <Image src="/icons/marriage.png" alt="Marriage icon" width={80} height={80} />
               </div>
               <p className="text-sm">1st to marry divorcees of any faith</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-24 h-24 mb-4">
-                <Image src="/icons/same-sex.png" alt="Same sex icon" width={96} height={96} />
+              <div className="w-20 h-20 mb-4">
+                <Image src="/icons/same-sex.png" alt="Same sex icon" width={80} height={80} />
               </div>
               <p className="text-sm">1st to offer same sex marriages</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-24 h-24 mb-4">
-                <Image src="/icons/ceremony.png" alt="Ceremony icon" width={96} height={96} />
+              <div className="w-20 h-20 mb-4">
+                <Image src="/icons/ceremony.png" alt="Ceremony icon" width={80} height={80} />
               </div>
               <p className="text-sm">1st in the North West to perform same sex ceremonies</p>
             </div>
