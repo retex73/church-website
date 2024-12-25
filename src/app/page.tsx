@@ -5,50 +5,61 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 text-white">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="Unitarian Logo" width={50} height={50} />
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 text-white" aria-label="Main navigation">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center">
+          <Link href="/" className="flex items-center" aria-label="Home">
+            <Image src="/logo.png" alt="Unitarian Logo" width={100} height={100} />
           </Link>
-          <div className="flex gap-8">
-            <Link href="#" className="hover:text-yellow-400">HOME</Link>
-            <Link href="#" className="hover:text-yellow-400">ABOUT</Link>
-            <Link href="#" className="hover:text-yellow-400">SERVICES</Link>
-            <Link href="#" className="hover:text-yellow-400">RENT OUR SPACES</Link>
-            <Link href="#" className="hover:text-yellow-400">VIDEOS</Link>
-            <Link href="#" className="hover:text-yellow-400">EVENTS</Link>
-            <Link href="#" className="hover:text-yellow-400">BLOG</Link>
-            <Link href="#" className="hover:text-yellow-400">CONTACT</Link>
+          <div className="ml-10">
+            <ul className="flex gap-8 list-none" role="menubar">
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">HOME</Link></li>
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">ABOUT</Link></li>
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">SERVICES</Link></li>
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">RENT OUR SPACES</Link></li>
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">VIDEOS</Link></li>
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">EVENTS</Link></li>
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">BLOG</Link></li>
+              <li role="none"><Link href="#" className="hover:text-yellow-400" role="menuitem">CONTACT</Link></li>
+            </ul>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center text-white bg-black pt-16">
-        <div className="absolute inset-0 bg-black/20 z-10"></div>
-        <Image
-          src="/hero-image.jpg"
-          alt="Diverse hands united"
-          fill
-          sizes="100vw"
-          quality={100}
-          className="object-cover opacity-90"
-          priority
-        />
-        <div className="relative z-20 max-w-4xl mx-auto px-4 text-left">
-          <div className="space-y-2 text-2xl md:text-3xl lg:text-4xl font-light">
-            <p>We love <span className="font-medium">Jesus</span>. We love <span className="font-medium">Buddha</span> too.</p>
-            <p>And <span className="font-medium">Muhammad</span> and <span className="font-medium">Krishna</span> and</p>
-            <p><span className="font-medium">Moses</span> and <span className="font-medium">Guru Nanak</span> and <span className="font-medium">Julian</span></p>
-            <p><span className="font-medium">of Norwich</span>. And lots of other folks.</p>
-            <p className="mt-4">We are <span className="font-medium text-yellow-400">Unitarians</span>.</p>
+      <section className="relative h-[700px] bg-black pt-16">
+        <div className="absolute inset-0 z-10">
+          <div className="h-full max-w-7xl mx-auto grid md:grid-cols-2 items-center">
+            {/* Text Content */}
+            <div className="relative px-4 pt-40 text-left hero-content">
+              <div className="space-y-1 text-2xl md:text-3xl lg:text-4xl font-light text-white">
+                <p>We love <span className="font-medium">Jesus</span>. We love <span className="font-medium">Buddha</span> too.</p>
+                <p>And <span className="font-medium">Muhammad</span> and <span className="font-medium">Krishna</span> and</p>
+                <p><span className="font-medium">Moses</span> and <span className="font-medium">Guru Nanak</span> and <span className="font-medium">Julian</span></p>
+                <p><span className="font-medium">of Norwich</span>. And lots of other folks.</p>
+                <p className="mt-3">We are <span className="font-medium text-yellow-400">Unitarians</span>.</p>
+              </div>
+              <p className="text-lg mt-3 text-gray-300">Welcome to the Dunham Road Unitarian Chapel, Altrincham.</p>
+            </div>
+
+            {/* Image Container */}
+            <div className="relative h-full overflow-hidden hero-image">
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black/80 z-10"></div>
+              <Image
+                src="/hero-image.jpg"
+                alt="Diverse hands united"
+                fill
+                sizes="50vw"
+                quality={100}
+                className="object-cover object-center"
+                priority
+              />
+            </div>
           </div>
-          <p className="text-lg mt-4">Welcome to the Dunham Road Unitarian Chapel, Altrincham.</p>
         </div>
       </section>
 
       {/* Join Us Section */}
-      <section className="relative bg-white py-12">
+      <section className="relative h-[430px] bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[300px] shadow-xl rounded-lg overflow-hidden">
             <Image
